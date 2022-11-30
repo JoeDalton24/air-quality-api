@@ -10,7 +10,7 @@ const app = express();
 // connection to database
 await dbConnection();
 
-app.use("api/", airRoutes);
+app.use("/api/", airRoutes);
 
 // cron job to check Paris zone air quality;
 job.start();

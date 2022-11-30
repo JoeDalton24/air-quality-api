@@ -6,11 +6,17 @@ import { Cron } from "../config/cron.js";
 export const job = new CronJob(
   Cron.EVRY_MINUTE,
   async function () {
-    const result = await getAirQuailty(48.856613, 2.352222);
+    try {
+      const result = await getAirQuailty(48.856613, 2.352222);
 
-    await AirQualityModel.create({ ...result.Pollution });
+      if (result) {
+        await AirQualityModel.create({ ...result.Pollution });
+      }
 
-    console.log("Paris zone air quality job run");
+      console.log("Paris zone air quality job run");
+    } catch (error) {
+      console.log("error on cron jobs");
+    }
   },
   null,
   true,

@@ -7,6 +7,6 @@ export const airQualityController = async (req, res) => {
 
     res.send({ Result: response });
   } catch (error) {
-    console.log("error controller");
+    console.log("error airQualityController");
   }
 };

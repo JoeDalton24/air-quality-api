@@ -14,7 +14,9 @@ const result = Joi.object({
 describe("GET /air_quailty", function () {
   it("should return valid air quality information", function () {
     return frisby
-      .get("http://localhost:3000/air_quality?lat=48.856613&lon=2.352222")
+      .get(
+        "http://localhost:3000/api/city_air_quality?lat=48.856613&lon=2.352222"
+      )
       .expect("status", 200)
       .expect("jsonTypesStrict", "*", result);
   });
