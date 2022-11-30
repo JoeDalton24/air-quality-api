@@ -1,5 +1,23 @@
 import mongoose from "mongoose";
 
+/**
+ * @openapi
+ * component:
+ *  schema:
+ *    AirQuality:
+ *      type: object
+ *      properties:
+ *        ts:
+ *          type: string
+ *        aqius:
+ *          type: number
+ *        mainus:
+ *          type: string
+ *        aqicn:
+ *          type: number
+ *        maincn:
+ *          type: string
+ */
 const schema = new mongoose.Schema(
   {
     ts: String,
