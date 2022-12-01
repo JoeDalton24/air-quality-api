@@ -2,9 +2,9 @@ import mongoose from "mongoose";
 
 /**
  * @openapi
- * component:
- *  schema:
- *    AirQuality:
+ * components:
+ *  schemas:
+ *    AirQualityResponse:
  *      type: object
  *      properties:
  *        ts:

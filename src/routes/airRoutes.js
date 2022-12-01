@@ -20,16 +20,16 @@ const router = express.Router();
  *          - in: query
  *            name: lon
  *            schema:
- *              type:number
+ *              type: number
  *            description: Longitude of the city
  *            required: true
- *      response:
+ *      responses:
  *          200:
- *              description: success
+ *              description: Success
  *              content:
  *                  application/json:
  *                      schema:
- *                          $ref:'#/components/model/AirQuality'
+ *                          $ref: '#/components/schemas/AirQualityResponse'
  */
 router.get("/city_air_quality", airQualityController);
 

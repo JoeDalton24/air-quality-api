@@ -9,7 +9,7 @@ const options = {
       version: "1.0.0",
     },
   },
-  apis: ["./src/routes/airRoutes.js", "./src/model/*.js"],
+  apis: ["./src/routes/airRoutes.js", "./src/model/airQualityModel.js"],
 };
 
 const swaggerSpec = swaggerJSDoc(options);
